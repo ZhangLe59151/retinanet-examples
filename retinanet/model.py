@@ -22,7 +22,8 @@ class Model(nn.Module):
         self.name = 'RetinaNet'
         self.exporting = False
 
-        self.ratios = [1.0, 2.0, 0.5, 10.0, 0.1, 8.0, 0.2, 7.0, 0.3]
+        # self.ratios = [1.0, 2.0, 0.5]
+        self.ratios = [1.0, 2.0, 0.5, 10.0, 0.1, 8.0, 0.2, 7.0, 0.3] # add more shape
         self.scales = [4 * 2**(i/3) for i in range(3)]
         self.anchors = {}
         self.classes = classes
